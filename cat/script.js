@@ -62,17 +62,3 @@ function light() {
 function dark() {
 	document.documentElement.setAttribute('cat-data-theme', 'dark');
 }
-
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	dark();
-} else {
-	light();
-}
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-	if (event.matches) {
-		dark();
-	} else {
-		light();
-	}
-});
